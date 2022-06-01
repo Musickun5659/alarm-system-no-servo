@@ -10,9 +10,9 @@ let _switch = 0
 let servo_value = 0
 pins.setAudioPin(AnalogPin.P2)
 basic.forever(function () {
-    servo_value = pins.analogReadPin(AnalogPin.P0)
+    servo_value = pins.digitalReadPin(DigitalPin.P0)
     _switch = pins.digitalReadPin(DigitalPin.P1)
-    if (servo_value == 0) {
+    if (servo_value == 1) {
         disablealarm()
     } else if (_switch == 1) {
     	
